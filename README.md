@@ -1,8 +1,17 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Security Orchestration, Automation and Response (SOAR) Banner" width="100%">
+</p>
+
 # 🛡️ Awesome Security Orchestration, Automation & Response (SOAR)
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![Track Awesome List](https://www.trackawesomelist.com/badge.svg)](https://www.trackawesomelist.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://awesome.re/badge.svg" alt="Awesome List" /></a>
+  <a href="https://www.trackawesomelist.com/ishandutta2007/Awesome-Security-Orchestration-Automation-Response-Soar/"><img src="https://www.trackawesomelist.com/badge.svg" alt="Track Awesome List" /></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
 > ⚡ **A curated directory of leading SaaS platforms and open-source GitHub projects for Security Orchestration, Automation, and Response (SOAR), AI-driven SOC hyperautomation, incident triage, security playbooks, and threat intelligence orchestration.**
 
@@ -16,6 +25,8 @@
 - [🏢 SaaS & Commercial Enterprise Platforms](#-saas--commercial-enterprise-platforms)
 - [🔓 Open-Source GitHub Projects](#-open-source-github-projects)
 - [💡 Architectural Trade-offs & Selection Guide](#-architectural-trade-offs--selection-guide)
+- [📈 Star History](#-star-history)
+- [💖 Support & Community](#-support--community)
 - [🤝 How to Contribute](#-how-to-contribute)
 - [⚖️ Disclaimer](#-disclaimer)
 
@@ -35,16 +46,16 @@ The table below summarizes leading commercial and SaaS SOAR solutions, sorted in
 
 | Platform | Company Valuation / Size | Starting Pricing | Free Tier / Free Trial Limits | Key Capabilities |
 | :--- | :--- | :--- | :--- | :--- |
-| **[Microsoft Sentinel Automation](https://learn.microsoft.com/azure/sentinel/)** | **~$3.1 Trillion** (Market Cap) | **~$0.042/env hr + ~$0.00008/exec-sec** (Azure Logic Apps consumption tier) | **30-Day Free Trial** with up to $200 Azure credits; first 4,000 built-in Logic App actions free per billing month | Native Azure Logic Apps orchestration, 300+ Microsoft & 3rd-party connectors, automated incident response |
-| **[Palo Alto Cortex XSOAR](https://www.paloaltonetworks.com/)** | **~$280 Billion** (Market Cap) | **~$125,000/yr** (Enterprise base tier list price via direct/EDP quotes) | **30-Day Full Trial**, then converts to permanent Community Edition capped at **166 daily automation commands**, 5 active threat feeds, & 30-day incident retention | Category-defining enterprise SOAR, 1,000+ content packs, native Threat Intelligence Management (TIM), War Room collaboration |
-| **[CrowdStrike Falcon Fusion](https://www.crowdstrike.com/)** | **~$260 Billion** (Market Cap) | **$184.99/device/yr** (Included in Falcon Enterprise tier / platform bundles) | **15-Day Free Trial** of CrowdStrike Falcon platform with native Fusion SOAR workflows for up to 100 endpoints | Embedded SOAR within the Falcon platform, unified endpoint/identity/cloud telemetry, automated containment actions |
-| **[Splunk SOAR](https://www.splunk.com/)** | **$28 Billion** (Acquisition Value by Cisco) | **Custom Enterprise Quote** (Workload/ingest bundled pricing; historically ~$3,000/seat/yr) | **Permanent Free Community License** (on-prem) capped at **100 licensed actions/day**, 1 tenant, and maximum 5 open cases | Deep integration with Splunk Enterprise Security, visual playbook editor, Phantom app ecosystem, case management |
-| **[Sumo Logic Cloud SOAR](https://www.sumologic.com/)** | **$1.7 Billion** (Acquisition Value by Francisco Partners) | **Custom Credit Quote** (Cloud Flex Credit model, unlimited seats) | **30-Day Full-Access Free Trial** (plus a 14-day preloaded Agentic Sandbox) across Cloud SIEM & Cloud SOAR features | Cloud-native SecOps platform with automated playbook execution, alert triage, and incident lifecycle management |
-| **[Torq](https://torq.io/)** | **$1.2 Billion** (Valuation, 2026 Series D) | **Custom Quote** (Torq Essential vs. Pro SOC tiers, multi-agent pricing) | **No Public Free Tier**; evaluation via scheduled guided sales demo and coordinated 14-to-30 day POC sandbox | AI-native SOC hyperautomation, autonomous multi-agent playbooks, natural language workflow creation |
-| **[Tines](https://www.tines.com/)** | **$1.125 Billion** (Valuation, 2025 Series C) | **$500/month** (~$6,000/yr billed annually for Starter/Core self-serve plans) | **Forever Free Community Edition**: 1 builder seat, **3 active stories/workflows**, unlimited view-only users, and core integrations | No-code workflow automation engineered for SecOps practitioners, durable execution, instant API connectors |
-| **[Rapid7 InsightConnect](https://www.rapid7.com/)** | **~$1.0 Billion** (Market Cap) | **Custom Job-Tier Quote** (Priced on automation job volume or bundled with InsightIDR) | **30-Day Free Trial** across Rapid7 Insight platform with active orchestration modules upon sales request | 300+ pre-built security plugins, cross-product automation with InsightIDR and InsightVM, automated containment |
-| **[Swimlane](https://swimlane.com/)** | **>$300 Million** (Growth Capital Raised) | **Custom Action-Tier Quote** (Turbine Starter through Elite tiers, unlimited users/playbooks) | **No Public Self-Service Tier**; 30-day proof-of-concept (POC) sandbox arranged via enterprise sales | Low-code security automation, Turbine Canvas workflow engine, Hero AI autonomous triage assistant |
-| **[D3 Security](https://d3security.com/)** | **~$15 Million** (Total Funding; ~$25M-$50M Est. Revenue) | **Custom Alert-Tier Quote** (Subscription tiered by 500 to 10,000+ daily alerts + named seats) | **No Public Free Tier**; proof-of-concept trial arranged via sales demonstration and threat scenario scoping | D3 Smart SOAR and Morpheus AI, fixed daily alert volume model, MITRE ATT&CK auto-correlation, multi-tenant MSSP support |
+| **[Microsoft Sentinel Automation](https://learn.microsoft.com/azure/sentinel/)** | **~$3.1 Trillion** (Market Cap) | **~$0.042/env hr + ~$0.00008/exec-sec** (Azure Logic Apps consumption tier) | **30-Day Free Trial** with up to $200 Azure credits; first 4,000 built-in Logic App actions free per billing month | ☁️ Native Azure Logic Apps orchestration, 300+ Microsoft & 3rd-party connectors, automated incident response |
+| **[Palo Alto Cortex XSOAR](https://www.paloaltonetworks.com/)** | **~$280 Billion** (Market Cap) | **~$125,000/yr** (Enterprise base tier list price via direct/EDP quotes) | **30-Day Full Trial**, then converts to permanent Community Edition capped at **166 daily automation commands**, 5 active threat feeds, & 30-day incident retention | 🛡️ Category-defining enterprise SOAR, 1,000+ content packs, native Threat Intelligence Management (TIM), War Room collaboration |
+| **[CrowdStrike Falcon Fusion](https://www.crowdstrike.com/)** | **~$260 Billion** (Market Cap) | **$184.99/device/yr** (Included in Falcon Enterprise tier / platform bundles) | **15-Day Free Trial** of CrowdStrike Falcon platform with native Fusion SOAR workflows for up to 100 endpoints | 🦅 Embedded SOAR within the Falcon platform, unified endpoint/identity/cloud telemetry, automated containment actions |
+| **[Splunk SOAR](https://www.splunk.com/)** | **$28 Billion** (Acquisition Value by Cisco) | **Custom Enterprise Quote** (Workload/ingest bundled pricing; historically ~$3,000/seat/yr) | **Permanent Free Community License** (on-prem) capped at **100 licensed actions/day**, 1 tenant, and maximum 5 open cases | ⚡ Deep integration with Splunk Enterprise Security, visual playbook editor, Phantom app ecosystem, case management |
+| **[Sumo Logic Cloud SOAR](https://www.sumologic.com/)** | **$1.7 Billion** (Acquisition Value by Francisco Partners) | **Custom Credit Quote** (Cloud Flex Credit model, unlimited seats) | **30-Day Full-Access Free Trial** (plus a 14-day preloaded Agentic Sandbox) across Cloud SIEM & Cloud SOAR features | ☁️ Cloud-native SecOps platform with automated playbook execution, alert triage, and incident lifecycle management |
+| **[Torq](https://torq.io/)** | **$1.2 Billion** (Valuation, 2026 Series D) | **Custom Quote** (Torq Essential vs. Pro SOC tiers, multi-agent pricing) | **No Public Free Tier**; evaluation via scheduled guided sales demo and coordinated 14-to-30 day POC sandbox | 🤖 AI-native SOC hyperautomation, autonomous multi-agent playbooks, natural language workflow creation |
+| **[Tines](https://www.tines.com/)** | **$1.125 Billion** (Valuation, 2025 Series C) | **$500/month** (~$6,000/yr billed annually for Starter/Core self-serve plans) | **Forever Free Community Edition**: 1 builder seat, **3 active stories/workflows**, unlimited view-only users, and core integrations | 🛠️ No-code workflow automation engineered for SecOps practitioners, durable execution, instant API connectors |
+| **[Rapid7 InsightConnect](https://www.rapid7.com/)** | **~$1.0 Billion** (Market Cap) | **Custom Job-Tier Quote** (Priced on automation job volume or bundled with InsightIDR) | **30-Day Free Trial** across Rapid7 Insight platform with active orchestration modules upon sales request | 🔍 300+ pre-built security plugins, cross-product automation with InsightIDR and InsightVM, automated containment |
+| **[Swimlane](https://swimlane.com/)** | **>$300 Million** (Growth Capital Raised) | **Custom Action-Tier Quote** (Turbine Starter through Elite tiers, unlimited users/playbooks) | **No Public Self-Service Tier**; 30-day proof-of-concept (POC) sandbox arranged via enterprise sales | 🌊 Low-code security automation, Turbine Canvas workflow engine, Hero AI autonomous triage assistant |
+| **[D3 Security](https://d3security.com/)** | **~$15 Million** (Total Funding; ~$25M-$50M Est. Revenue) | **Custom Alert-Tier Quote** (Subscription tiered by 500 to 10,000+ daily alerts + named seats) | **No Public Free Tier**; proof-of-concept trial arranged via sales demonstration and threat scenario scoping | 🎯 D3 Smart SOAR and Morpheus AI, fixed daily alert volume model, MITRE ATT&CK auto-correlation, multi-tenant MSSP support |
 
 ---
 
@@ -54,20 +65,20 @@ The table below lists top open-source projects for SOAR, security automation, ca
 
 | Project | Stars | Primary Focus & Architecture | License |
 | :--- | :--- | :--- | :--- |
-| **[n8n](https://github.com/n8n-io/n8n)** | [![GitHub stars](https://img.shields.io/github/stars/n8n-io/n8n?style=social&color=white)](https://github.com/n8n-io/n8n/stargazers) | **General Workflow Automation**: Visual node-based workflow engine with 400+ nodes and webhook triggers. *Note: Not a dedicated SOAR; lacks native case management and entity correlation, but widely deployed as a lightweight SOC automation pipeline.* | Sustainable Use License (Fair-code) |
-| **[Wazuh](https://github.com/wazuh/wazuh)** | [![GitHub stars](https://img.shields.io/github/stars/wazuh/wazuh?style=social&color=white)](https://github.com/wazuh/wazuh/stargazers) | **SIEM / XDR Active Response**: Unified agent for threat detection and compliance with built-in Active Response scripts to drop malicious connections, isolate hosts, and block brute-force attacks. | GPL-2.0 |
-| **[MISP](https://github.com/MISP/MISP)** | [![GitHub stars](https://img.shields.io/github/stars/MISP/MISP?style=social&color=white)](https://github.com/MISP/MISP/stargazers) | **Threat Intelligence Orchestration**: Open-source threat intelligence sharing platform with automated IOC synchronization, sharing communities, and automated enrichment feeds. | AGPL-3.0 |
-| **[StackStorm (st2)](https://github.com/StackStorm/st2)** | [![GitHub stars](https://img.shields.io/github/stars/StackStorm/st2?style=social&color=white)](https://github.com/StackStorm/st2/stargazers) | **Event-Driven Automation Engine**: Mature rule-based automation engine with ~160 integration packs, Orquesta workflow runner, and automated infrastructure remediation. | Apache-2.0 |
-| **[Netflix Dispatch](https://github.com/Netflix/dispatch)** | [![GitHub stars](https://img.shields.io/github/stars/Netflix/dispatch?style=social&color=white)](https://github.com/Netflix/dispatch/stargazers) | **Security Incident Management**: All-in-one crisis and incident orchestration platform developed by Netflix to manage Slack/Zoom war rooms, track incident lifecycle, and assign action items. | Apache-2.0 |
-| **[TheHive](https://github.com/TheHive-Project/TheHive)** | [![GitHub stars](https://img.shields.io/github/stars/TheHive-Project/TheHive?style=social&color=white)](https://github.com/TheHive-Project/TheHive/stargazers) | **Security Incident Response (SIRP)**: SOC case management platform with real-time collaboration, dynamic task checklists, and MISP synchronization. *(v4 AGPL-3.0; v5 StrangeBee commercial model with 2-user Community edition).* | AGPL-3.0 / Commercial |
-| **[Tracecat](https://github.com/TracecatHQ/tracecat)** | [![GitHub stars](https://img.shields.io/github/stars/TracecatHQ/tracecat?style=social&color=white)](https://github.com/TracecatHQ/tracecat/stargazers) | **AI-Native Dedicated SOAR**: Modern self-hosted SOAR powered by Temporal durable workflow execution, YAML-as-code and visual drag-and-drop builders, incident triage, and built-in case management. | AGPL-3.0 / Apache-2.0 |
-| **[Shuffle](https://github.com/Shuffle/Shuffle)** | [![GitHub stars](https://img.shields.io/github/stars/Shuffle/Shuffle?style=social&color=white)](https://github.com/Shuffle/Shuffle/stargazers) | **Dedicated Open-Source SOAR**: Premier open-source SOAR platform featuring an interactive visual canvas, OpenAPI app generator connecting to 11,000+ endpoints, human-in-the-loop approval nodes, and Docker execution. | AGPL-3.0 |
-| **[FIR (Fast Incident Response)](https://github.com/certsocietegenerale/FIR)** | [![GitHub stars](https://img.shields.io/github/stars/certsocietegenerale/FIR?style=social&color=white)](https://github.com/certsocietegenerale/FIR/stargazers) | **Cybersecurity Incident Tracker**: Lightweight CERT incident response case tracker created by Société Générale for tracking compromised assets, business lines, and IOC statistics. | AGPL-3.0 |
-| **[Cortex](https://github.com/TheHive-Project/Cortex)** | [![GitHub stars](https://img.shields.io/github/stars/TheHive-Project/Cortex?style=social&color=white)](https://github.com/TheHive-Project/Cortex/stargazers) | **Observable Analysis Engine**: Automated observable triage and active response engine that analyzes IPs, hashes, URLs, and domains via 100+ analyzers and responders over REST APIs. | AGPL-3.0 |
-| **[DFIR-IRIS](https://github.com/dfir-iris/iris-web)** | [![GitHub stars](https://img.shields.io/github/stars/dfir-iris/iris-web?style=social&color=white)](https://github.com/dfir-iris/iris-web/stargazers) | **Collaborative IR Platform**: Web-based incident response platform designed for SOC/DFIR teams to organize investigations, graph evidence, parse forensic timelines, and share indicators. | LGPL-3.0 |
-| **[Demisto Content](https://github.com/demisto/content)** | [![GitHub stars](https://img.shields.io/github/stars/demisto/content?style=social&color=white)](https://github.com/demisto/content/stargazers) | **Open SOAR Playbook Repository**: Official open-source community repository for Palo Alto Cortex XSOAR integrations, incident playbooks, automation scripts, and detection rules. | MIT |
-| **[CISA Shareable SOAR Workflows](https://github.com/cisagov/shareable-soar-workflows)** | [![GitHub stars](https://img.shields.io/github/stars/cisagov/shareable-soar-workflows?style=social&color=white)](https://github.com/cisagov/shareable-soar-workflows/stargazers) | **Standardized SOAR Playbooks**: Open-source, vendor-neutral automated security workflows published by CISA mapped to the NIST Cybersecurity Framework in BPMN format. | CC0-1.0 |
-| **[DeepAlert](https://github.com/cookpad/deepalert)** | [![GitHub stars](https://img.shields.io/github/stars/cookpad/deepalert?style=social&color=white)](https://github.com/cookpad/deepalert/stargazers) | **Serverless Cloud SOAR**: Serverless security automation framework built with AWS Lambda and CDK that automatically correlates, assesses, and responds to cloud security findings. | Apache-2.0 |
+| **[n8n](https://github.com/n8n-io/n8n)** | [![GitHub stars](https://img.shields.io/github/stars/n8n-io/n8n?style=social&color=white)](https://github.com/n8n-io/n8n/stargazers) | 🔄 **General Workflow Automation**: Visual node-based workflow engine with 400+ nodes and webhook triggers. *Note: Not a dedicated SOAR; lacks native case management and entity correlation, but widely deployed as a lightweight SOC automation pipeline.* | Sustainable Use License (Fair-code) |
+| **[Wazuh](https://github.com/wazuh/wazuh)** | [![GitHub stars](https://img.shields.io/github/stars/wazuh/wazuh?style=social&color=white)](https://github.com/wazuh/wazuh/stargazers) | 🛡️ **SIEM / XDR Active Response**: Unified agent for threat detection and compliance with built-in Active Response scripts to drop malicious connections, isolate hosts, and block brute-force attacks. | GPL-2.0 |
+| **[MISP](https://github.com/MISP/MISP)** | [![GitHub stars](https://img.shields.io/github/stars/MISP/MISP?style=social&color=white)](https://github.com/MISP/MISP/stargazers) | 🌐 **Threat Intelligence Orchestration**: Open-source threat intelligence sharing platform with automated IOC synchronization, sharing communities, and automated enrichment feeds. | AGPL-3.0 |
+| **[StackStorm (st2)](https://github.com/StackStorm/st2)** | [![GitHub stars](https://img.shields.io/github/stars/StackStorm/st2?style=social&color=white)](https://github.com/StackStorm/st2/stargazers) | ⚙️ **Event-Driven Automation Engine**: Mature rule-based automation engine with ~160 integration packs, Orquesta workflow runner, and automated infrastructure remediation. | Apache-2.0 |
+| **[Netflix Dispatch](https://github.com/Netflix/dispatch)** | [![GitHub stars](https://img.shields.io/github/stars/Netflix/dispatch?style=social&color=white)](https://github.com/Netflix/dispatch/stargazers) | 🚨 **Security Incident Management**: All-in-one crisis and incident orchestration platform developed by Netflix to manage Slack/Zoom war rooms, track incident lifecycle, and assign action items. | Apache-2.0 |
+| **[TheHive](https://github.com/TheHive-Project/TheHive)** | [![GitHub stars](https://img.shields.io/github/stars/TheHive-Project/TheHive?style=social&color=white)](https://github.com/TheHive-Project/TheHive/stargazers) | 🐝 **Security Incident Response (SIRP)**: SOC case management platform with real-time collaboration, dynamic task checklists, and MISP synchronization. *(v4 AGPL-3.0; v5 StrangeBee commercial model with 2-user Community edition).* | AGPL-3.0 / Commercial |
+| **[Tracecat](https://github.com/TracecatHQ/tracecat)** | [![GitHub stars](https://img.shields.io/github/stars/TracecatHQ/tracecat?style=social&color=white)](https://github.com/TracecatHQ/tracecat/stargazers) | 🐾 **AI-Native Dedicated SOAR**: Modern self-hosted SOAR powered by Temporal durable workflow execution, YAML-as-code and visual drag-and-drop builders, incident triage, and built-in case management. | AGPL-3.0 / Apache-2.0 |
+| **[Shuffle](https://github.com/Shuffle/Shuffle)** | [![GitHub stars](https://img.shields.io/github/stars/Shuffle/Shuffle?style=social&color=white)](https://github.com/Shuffle/Shuffle/stargazers) | 🔀 **Dedicated Open-Source SOAR**: Premier open-source SOAR platform featuring an interactive visual canvas, OpenAPI app generator connecting to 11,000+ endpoints, human-in-the-loop approval nodes, and Docker execution. | AGPL-3.0 |
+| **[FIR (Fast Incident Response)](https://github.com/certsocietegenerale/FIR)** | [![GitHub stars](https://img.shields.io/github/stars/certsocietegenerale/FIR?style=social&color=white)](https://github.com/certsocietegenerale/FIR/stargazers) | 📋 **Cybersecurity Incident Tracker**: Lightweight CERT incident response case tracker created by Société Générale for tracking compromised assets, business lines, and IOC statistics. | AGPL-3.0 |
+| **[Cortex](https://github.com/TheHive-Project/Cortex)** | [![GitHub stars](https://img.shields.io/github/stars/TheHive-Project/Cortex?style=social&color=white)](https://github.com/TheHive-Project/Cortex/stargazers) | 🔬 **Observable Analysis Engine**: Automated observable triage and active response engine that analyzes IPs, hashes, URLs, and domains via 100+ analyzers and responders over REST APIs. | AGPL-3.0 |
+| **[DFIR-IRIS](https://github.com/dfir-iris/iris-web)** | [![GitHub stars](https://img.shields.io/github/stars/dfir-iris/iris-web?style=social&color=white)](https://github.com/dfir-iris/iris-web/stargazers) | 👁️ **Collaborative IR Platform**: Web-based incident response platform designed for SOC/DFIR teams to organize investigations, graph evidence, parse forensic timelines, and share indicators. | LGPL-3.0 |
+| **[Demisto Content](https://github.com/demisto/content)** | [![GitHub stars](https://img.shields.io/github/stars/demisto/content?style=social&color=white)](https://github.com/demisto/content/stargazers) | 📦 **Open SOAR Playbook Repository**: Official open-source community repository for Palo Alto Cortex XSOAR integrations, incident playbooks, automation scripts, and detection rules. | MIT |
+| **[CISA Shareable SOAR Workflows](https://github.com/cisagov/shareable-soar-workflows)** | [![GitHub stars](https://img.shields.io/github/stars/cisagov/shareable-soar-workflows?style=social&color=white)](https://github.com/cisagov/shareable-soar-workflows/stargazers) | 📜 **Standardized SOAR Playbooks**: Open-source, vendor-neutral automated security workflows published by CISA mapped to the NIST Cybersecurity Framework in BPMN format. | CC0-1.0 |
+| **[DeepAlert](https://github.com/cookpad/deepalert)** | [![GitHub stars](https://img.shields.io/github/stars/cookpad/deepalert?style=social&color=white)](https://github.com/cookpad/deepalert/stargazers) | ☁️ **Serverless Cloud SOAR**: Serverless security automation framework built with AWS Lambda and CDK that automatically correlates, assesses, and responds to cloud security findings. | Apache-2.0 |
 
 ---
 
@@ -89,16 +100,40 @@ When designing an automated Security Operations pipeline, engineering teams must
    Swimlane / Tines / Torq]                                                     StackStorm / Cortex]
 ```
 
-### 1. Dedicated Open-Source SOAR Platforms
+### 1. 🔀 Dedicated Open-Source SOAR Platforms
 * **[Shuffle](https://github.com/Shuffle/Shuffle)** is the gold standard for teams requiring a dedicated visual drag-and-drop SOAR with an extensive OpenAPI connector catalog (11,000+ endpoints) and built-in human-in-the-loop analyst gates.
 * **[Tracecat](https://github.com/TracecatHQ/tracecat)** provides an agile, code-centric alternative built on Temporal durable execution, making workflows resilient against network dropouts with bidirectional YAML/UI sync and free SAML SSO.
 
-### 2. General-Purpose Automation vs. True SOAR
+### 2. ⚡ General-Purpose Automation vs. True SOAR
 * **[n8n](https://github.com/n8n-io/n8n)** has become an immensely popular automation backbone, but **is not a native SOAR**: it lacks built-in case management, security entity correlation, and threat intelligence deduplication. For production SOCs, pair n8n with dedicated case management like **[DFIR-IRIS](https://github.com/dfir-iris/iris-web)** or **[TheHive](https://github.com/TheHive-Project/TheHive)**.
 
-### 3. Case Management & Analysis Infrastructure
+### 3. 🔬 Case Management & Analysis Infrastructure
 * For incident investigation and forensic evidence tracking, deploy **[DFIR-IRIS](https://github.com/dfir-iris/iris-web)** or **[TheHive](https://github.com/TheHive-Project/TheHive)**.
 * For automated IOC enrichment (IPs, hashes, domain reputation), hook your playbooks into **[Cortex](https://github.com/TheHive-Project/Cortex)** and **[MISP](https://github.com/MISP/MISP)**.
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Security-Orchestration-Automation-Response-Soar&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Security-Orchestration-Automation-Response-Soar&type=date&legend=top-left)
+
+---
+
+## 💖 Support & Community
+
+Thank you for visiting and supporting the **Awesome Security Orchestration, Automation & Response (SOAR)** repository! 🌟
+
+If you find this curated collection useful for your SecOps engineering, SOC workflows, or security architecture research, please consider:
+- ⭐ **Starring this repository** to improve visibility for the broader security community.
+- 🍴 **Forking and sharing** with your SOC analysts, security engineers, and incident response teams.
+- 💬 **Joining the conversation** on [Discord](https://discord.gg/jc4xtF58Ve) to discuss playbook automations, detection engineering, and self-hosted tools.
+- ☕ **Supporting the creator**: If you'd like to support ongoing research and community maintenance, feel free to [buy me a coffee via GitHub Sponsors](https://github.com/sponsors/ishandutta2007)!
+
+<p align="center">
+  <a href="https://github.com/sponsors/ishandutta2007">
+    <img src="https://img.shields.io/badge/Sponsor-%E2%9D%A4-pink?style=for-the-badge&logo=githubsponsors" alt="Sponsor on GitHub" />
+  </a>
+</p>
 
 ---
 
@@ -115,6 +150,6 @@ Contributions are welcome! Please follow these steps:
 
 ## ⚖️ Disclaimer
 
-- This repository is a community-curated list for educational and research purposes and does not constitute commercial endorsement.
-- Running self-hosted security automation engines handling API keys, cloud tokens, and incident logs requires strict network isolation, secrets vaulting, and continuous vulnerability patching.
-- All product names, logos, and trademarks belong to their respective holders.
+- ⚠️ This repository is a community-curated list for educational and research purposes and does not constitute commercial endorsement.
+- 🔐 Running self-hosted security automation engines handling API keys, cloud tokens, and incident logs requires strict network isolation, secrets vaulting, and continuous vulnerability patching.
+- 🏷️ All product names, logos, and trademarks belong to their respective holders.
