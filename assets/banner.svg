@@ -1,195 +1,186 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" style="background:#0a0f1d;border-radius:12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;overflow:hidden;">
   <defs>
-    <!-- Background Gradients -->
+    <!-- Background Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0f1d" />
-      <stop offset="50%" stop-color="#0d1b2a" />
-      <stop offset="100%" stop-color="#1b263b" />
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#050811" />
     </linearGradient>
 
-    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00f2fe" />
-      <stop offset="50%" stop-color="#4facfe" />
-      <stop offset="100%" stop-color="#7f00ff" />
+    <!-- Header Text Gradient -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
     </linearGradient>
 
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f2fe" />
-      <stop offset="50%" stop-color="#38ef7d" />
-      <stop offset="100%" stop-color="#00f2fe" />
+    <!-- Glowing Lines Gradients -->
+    <linearGradient id="lineGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.1" />
     </linearGradient>
 
-    <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0" />
-      <stop offset="50%" stop-color="#00f2fe" stop-opacity="0.8" />
-      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
+    <linearGradient id="lineGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#c084fc" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.1" />
     </linearGradient>
-
-    <!-- Glow Filters -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-
-    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
 
     <!-- Grid Pattern -->
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1f3050" stroke-width="0.8" opacity="0.35" />
-      <circle cx="40" cy="40" r="1" fill="#4facfe" opacity="0.3" />
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1" />
+      <circle cx="40" cy="40" r="1.5" fill="rgba(56, 189, 248, 0.18)" />
     </pattern>
+
+    <style>
+      .node-flow {
+        stroke-dasharray: 8 12;
+        animation: flow 20s linear infinite;
+      }
+      .node-flow-rev {
+        stroke-dasharray: 6 10;
+        animation: flowRev 15s linear infinite;
+      }
+      .float-pill {
+        animation: float 6s ease-in-out infinite alternate;
+      }
+      .float-pill-2 {
+        animation: float 5s ease-in-out infinite alternate-reverse;
+      }
+      .blink {
+        animation: blinkLed 2s infinite ease-in-out;
+      }
+      .pulse-glow {
+        animation: pulse 4s ease-in-out infinite alternate;
+      }
+      @keyframes flow {
+        from { stroke-dashoffset: 200; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes flowRev {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: 160; }
+      }
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(-8px); }
+      }
+      @keyframes blinkLed {
+        0%, 100% { opacity: 0.2; }
+        50% { opacity: 1; }
+      }
+      @keyframes pulse {
+        0% { opacity: 0.35; transform: scale(0.98); }
+        100% { opacity: 0.75; transform: scale(1.02); }
+      }
+    </style>
   </defs>
 
-  <style>
-    /* Dynamic Animated Elements */
-    @keyframes pulseBeam {
-      0% { stroke-dashoffset: 400; opacity: 0.2; }
-      50% { stroke-dashoffset: 0; opacity: 0.9; }
-      100% { stroke-dashoffset: -400; opacity: 0.2; }
-    }
+  <!-- Background Layer -->
+  <rect width="1200" height="360" fill="url(#bgGrad)" />
+  <rect width="1200" height="360" fill="url(#grid)" />
 
-    @keyframes floatParticle {
-      0% { transform: translateY(0px) scale(1); opacity: 0.3; }
-      50% { transform: translateY(-15px) scale(1.2); opacity: 0.8; }
-      100% { transform: translateY(0px) scale(1); opacity: 0.3; }
-    }
-
-    @keyframes radarSweep {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    @keyframes borderGlow {
-      0%, 100% { stroke: #00f2fe; stroke-opacity: 0.4; }
-      50% { stroke: #7f00ff; stroke-opacity: 0.9; }
-    }
-
-    .beam-line {
-      stroke-dasharray: 80 120;
-      animation: pulseBeam 6s linear infinite;
-    }
-
-    .beam-line-fast {
-      stroke-dasharray: 40 80;
-      animation: pulseBeam 3.5s linear infinite;
-    }
-
-    .particle-1 { animation: floatParticle 4s ease-in-out infinite; transform-origin: center; }
-    .particle-2 { animation: floatParticle 5.5s ease-in-out infinite 1s; transform-origin: center; }
-    .particle-3 { animation: floatParticle 6s ease-in-out infinite 2s; transform-origin: center; }
-
-    .animated-border {
-      animation: borderGlow 4s ease-in-out infinite;
-    }
-
-    .title-text {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-    }
-
-    .subtitle-text {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-    }
-
-    .tag-text {
-      font-family: "SF Mono", "Consolas", "Courier New", monospace;
-      font-weight: 600;
-      font-size: 13px;
-    }
-  </style>
-
-  <!-- Background -->
-  <rect width="1200" height="400" rx="16" fill="url(#bgGrad)" />
-  <rect width="1200" height="400" rx="16" fill="url(#grid)" />
-
-  <!-- Animated Ambient Circuit & Network Flows (Background) -->
-  <g opacity="0.6">
-    <!-- Horizontal Flow Lines -->
-    <path class="beam-line" d="M 0 80 L 350 80 L 450 140 L 750 140 L 850 80 L 1200 80" fill="none" stroke="#00f2fe" stroke-width="1.5" />
-    <path class="beam-line-fast" d="M 0 320 L 300 320 L 420 260 L 780 260 L 900 320 L 1200 320" fill="none" stroke="#7f00ff" stroke-width="1.5" />
-    <path class="beam-line" d="M 50 0 L 50 180 L 120 250 L 120 400" fill="none" stroke="#38ef7d" stroke-width="1.2" />
-    <path class="beam-line-fast" d="M 1150 0 L 1150 180 L 1080 250 L 1080 400" fill="none" stroke="#00f2fe" stroke-width="1.2" />
-
-    <!-- Ambient glowing nodes -->
-    <circle class="particle-1" cx="350" cy="80" r="4" fill="#00f2fe" filter="url(#softGlow)" />
-    <circle class="particle-2" cx="850" cy="80" r="4" fill="#38ef7d" filter="url(#softGlow)" />
-    <circle class="particle-3" cx="300" cy="320" r="4" fill="#7f00ff" filter="url(#softGlow)" />
-    <circle class="particle-1" cx="900" cy="320" r="4" fill="#00f2fe" filter="url(#softGlow)" />
-    <circle class="particle-2" cx="600" cy="40" r="3" fill="#4facfe" filter="url(#softGlow)" />
-    <circle class="particle-3" cx="600" cy="360" r="3" fill="#4facfe" filter="url(#softGlow)" />
+  <!-- Dynamic Glowing Orbs in Background -->
+  <g class="pulse-glow" transform="translate(600, 180)">
+    <circle cx="-380" cy="-60" r="130" fill="#38bdf8" opacity="0.12" />
+    <circle cx="380" cy="50" r="150" fill="#818cf8" opacity="0.12" />
+    <circle cx="0" cy="80" r="90" fill="#c084fc" opacity="0.08" />
   </g>
 
-  <!-- Central Watermark Shield (Dimmable, in layer behind text) -->
-  <g transform="translate(600, 200) scale(0.7)" opacity="0.12">
-    <path d="M 0 -180 L 140 -120 L 140 30 C 140 120 0 180 0 180 C 0 180 -140 120 -140 30 L -140 -120 Z" fill="none" stroke="url(#shieldGrad)" stroke-width="12" />
-    <path d="M 0 -140 L 100 -90 L 100 20 C 100 90 0 140 0 140 C 0 90 -100 20 -100 -90 L -100 -140 Z" fill="url(#shieldGrad)" />
+  <!-- Animated Data Highway Streams -->
+  <g opacity="0.5">
+    <path class="node-flow" d="M -50 90 Q 300 20, 600 90 T 1250 80" fill="none" stroke="url(#lineGrad1)" stroke-width="2" />
+    <path class="node-flow-rev" d="M -50 280 Q 350 320, 700 270 T 1250 290" fill="none" stroke="url(#lineGrad2)" stroke-width="2" />
+    <path class="node-flow" d="M 50 -20 Q 250 180, 50 380" fill="none" stroke="rgba(56, 189, 248, 0.25)" stroke-width="1.5" />
+    <path class="node-flow-rev" d="M 1150 -20 Q 950 180, 1150 380" fill="none" stroke="rgba(192, 132, 252, 0.25)" stroke-width="1.5" />
   </g>
 
-  <!-- Decorative Outer Frame with dynamic glowing border -->
-  <rect class="animated-border" x="12" y="12" width="1176" height="376" rx="12" fill="none" stroke="#00f2fe" stroke-width="1.5" opacity="0.5" />
+  <!-- Cyber Defense Console / SOC Nodes (Left & Right Flanks) -->
+  <g opacity="0.5" transform="translate(45, 110)">
+    <rect x="0" y="0" width="70" height="140" rx="8" fill="#131d31" stroke="rgba(56,189,248,0.3)" stroke-width="1.5" />
+    <line x1="8" y1="28" x2="62" y2="28" stroke="#1e293b" stroke-width="2" />
+    <line x1="8" y1="56" x2="62" y2="56" stroke="#1e293b" stroke-width="2" />
+    <line x1="8" y1="84" x2="62" y2="84" stroke="#1e293b" stroke-width="2" />
+    <line x1="8" y1="112" x2="62" y2="112" stroke="#1e293b" stroke-width="2" />
+    <circle cx="16" cy="14" r="3" fill="#10b981" class="blink" style="animation-delay: 0.1s;" />
+    <circle cx="26" cy="14" r="3" fill="#38bdf8" class="blink" style="animation-delay: 0.6s;" />
+    <circle cx="16" cy="42" r="3" fill="#10b981" class="blink" style="animation-delay: 0.3s;" />
+    <circle cx="26" cy="42" r="3" fill="#38bdf8" class="blink" style="animation-delay: 0.8s;" />
+    <circle cx="16" cy="70" r="3" fill="#38bdf8" class="blink" style="animation-delay: 1.1s;" />
+    <circle cx="16" cy="98" r="3" fill="#10b981" class="blink" style="animation-delay: 0.5s;" />
+    <circle cx="16" cy="126" r="3" fill="#10b981" class="blink" style="animation-delay: 0.9s;" />
+  </g>
 
-  <!-- FOREGROUND: Distinct Title, Subtitle & Indicators -->
-  <g id="foreground-content">
-    <!-- Category Pill Badge -->
-    <g transform="translate(600, 72)">
-      <rect x="-185" y="-18" width="370" height="36" rx="18" fill="#112240" stroke="#00f2fe" stroke-width="1.2" filter="url(#softGlow)" />
-      <!-- Pulsing Dot -->
-      <circle cx="-160" cy="0" r="5" fill="#38ef7d" className="particle-1">
-        <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
-      </circle>
-      <text class="tag-text" x="10" y="5" fill="#e2e8f0" text-anchor="middle">CYBERSECURITY HYPERAUTOMATION &amp; SEC OPS</text>
+  <g opacity="0.5" transform="translate(1085, 110)">
+    <rect x="0" y="0" width="70" height="140" rx="8" fill="#131d31" stroke="rgba(192,132,252,0.3)" stroke-width="1.5" />
+    <line x1="8" y1="28" x2="62" y2="28" stroke="#1e293b" stroke-width="2" />
+    <line x1="8" y1="56" x2="62" y2="56" stroke="#1e293b" stroke-width="2" />
+    <line x1="8" y1="84" x2="62" y2="84" stroke="#1e293b" stroke-width="2" />
+    <line x1="8" y1="112" x2="62" y2="112" stroke="#1e293b" stroke-width="2" />
+    <circle cx="16" cy="14" r="3" fill="#10b981" class="blink" style="animation-delay: 0.2s;" />
+    <circle cx="26" cy="14" r="3" fill="#c084fc" class="blink" style="animation-delay: 0.7s;" />
+    <circle cx="16" cy="42" r="3" fill="#c084fc" class="blink" style="animation-delay: 1.2s;" />
+    <circle cx="16" cy="70" r="3" fill="#10b981" class="blink" style="animation-delay: 0.4s;" />
+    <circle cx="16" cy="98" r="3" fill="#38bdf8" class="blink" style="animation-delay: 1.4s;" />
+    <circle cx="16" cy="126" r="3" fill="#10b981" class="blink" style="animation-delay: 0.6s;" />
+  </g>
+
+  <!-- Dynamic Floating Decorative Tech Pills (Sides) -->
+  <g class="float-pill">
+    <g transform="translate(140, 50)">
+      <rect width="140" height="32" rx="16" fill="rgba(30, 41, 59, 0.75)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1" />
+      <text x="70" y="20" fill="#94a3b8" font-size="12" font-weight="600" text-anchor="middle">⚡ Rapid Containment</text>
     </g>
+  </g>
+  <g class="float-pill-2">
+    <g transform="translate(920, 50)">
+      <rect width="140" height="32" rx="16" fill="rgba(30, 41, 59, 0.75)" stroke="rgba(192, 132, 252, 0.3)" stroke-width="1" />
+      <text x="70" y="20" fill="#94a3b8" font-size="12" font-weight="600" text-anchor="middle">🛡️ Automated SecOps</text>
+    </g>
+  </g>
+
+  <!-- FOREGROUND CONTENT: Header, Subtitle, and Categorical Chips -->
+  <g transform="translate(600, 105)" text-anchor="middle">
+    <!-- Super-tag -->
+    <rect x="-175" y="-38" width="350" height="26" rx="13" fill="rgba(56, 189, 248, 0.12)" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1" />
+    <text x="0" y="-21" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="1.5">CYBERSECURITY HYPERAUTOMATION &amp; SEC OPS</text>
 
     <!-- Main Title -->
-    <text class="title-text" x="600" y="152" text-anchor="middle" font-size="44" fill="#ffffff" filter="url(#glow)">
-      Awesome Security Orchestration
-    </text>
-    <text class="title-text" x="600" y="206" text-anchor="middle" font-size="38" fill="url(#textGrad)">
-      Automation &amp; Response (SOAR)
-    </text>
+    <text x="0" y="32" fill="url(#headerGrad)" font-size="34" font-weight="800" letter-spacing="-0.5">Awesome Security Orchestration, Automation &amp; Response (SOAR)</text>
 
     <!-- Subtitle -->
-    <text class="subtitle-text" x="600" y="258" text-anchor="middle" font-size="18" fill="#cbd5e1">
-      Top SaaS Platforms &bull; Open-Source Projects &bull; AI Agents &bull; SOC Playbook Automation
+    <text x="0" y="70" fill="#94a3b8" font-size="16" font-weight="400">
+      Curated SaaS Platforms, Open-Source Projects, Playbook Automation &amp; SOC Incident Triage
     </text>
 
-    <!-- Bottom Feature Badges / Highlights -->
-    <g transform="translate(600, 318)">
-      <!-- Badge 1: Playbook Workflows -->
+    <!-- Architecture Pillars (Foreground Tags) -->
+    <g transform="translate(0, 115)">
+      <!-- Pill 1 -->
       <g transform="translate(-320, 0)">
-        <rect x="-95" y="-16" width="190" height="32" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1" />
-        <text class="tag-text" x="0" y="5" fill="#38ef7d" text-anchor="middle">⚡ Incident Triage</text>
+        <rect x="0" y="0" width="145" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="72.5" y="21" fill="#e2e8f0" font-size="12.5" font-weight="600">⚡ Incident Triage</text>
       </g>
-
-      <!-- Badge 2: Case Management -->
-      <g transform="translate(-110, 0)">
-        <rect x="-95" y="-16" width="190" height="32" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1" />
-        <text class="tag-text" x="0" y="5" fill="#00f2fe" text-anchor="middle">🛡️ Threat Containment</text>
+      <!-- Pill 2 -->
+      <g transform="translate(-155, 0)">
+        <rect x="0" y="0" width="140" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="70" y="21" fill="#e2e8f0" font-size="12.5" font-weight="600">🛡️ Containment</text>
       </g>
-
-      <!-- Badge 3: Multi-Agent AI -->
-      <g transform="translate(110, 0)">
-        <rect x="-95" y="-16" width="190" height="32" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1" />
-        <text class="tag-text" x="0" y="5" fill="#a78bfa" text-anchor="middle">🤖 Agentic AI Playbooks</text>
+      <!-- Pill 3 -->
+      <g transform="translate(5, 0)">
+        <rect x="0" y="0" width="150" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="75" y="21" fill="#e2e8f0" font-size="12.5" font-weight="600">🤖 Agentic AI SOC</text>
       </g>
-
-      <!-- Badge 4: Open Source Stacks -->
-      <g transform="translate(320, 0)">
-        <rect x="-95" y="-16" width="190" height="32" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1" />
-        <text class="tag-text" x="0" y="5" fill="#38bdf8" text-anchor="middle">🔓 Self-Hosted SOC</text>
+      <!-- Pill 4 -->
+      <g transform="translate(175, 0)">
+        <rect x="0" y="0" width="145" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="72.5" y="21" fill="#e2e8f0" font-size="12.5" font-weight="600">🔓 Self-Hosted</text>
       </g>
     </g>
+
+    <!-- Bottom Metadata Indicator -->
+    <text x="0" y="195" fill="#64748b" font-size="12" font-weight="500">
+      Playbook Automation • Case Management • MTTD/MTTR Reduction • Open-Source &amp; Enterprise
+    </text>
   </g>
 </svg>
